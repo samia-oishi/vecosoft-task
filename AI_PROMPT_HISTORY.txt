@@ -265,3 +265,15 @@ fix the issues.
 ========================
 
 Task 1 now includes in-transit, delayed, delivered, delivered-but-not-received, tracking-unavailable, and loading states. Support and report-issue actions now show accessible feedback. Task 2 now reports evicted keys from `put`, includes a regression test for eviction reporting, and its regenerated screenshot explicitly shows `evicted "B"` and `evicted "A"` for the company example.
+
+
+[USER — 2026-09-24 — PREVIEW CONTROL DESIGN REQUEST]
+======================================================
+
+this part looks awkward the preview part. can we think of something better? like a way tp toggle between those states in better design? also add in a tolltip over the preview thing so they understand that this is solely for task purposes not something i'd normally do . normally we toggle these states based on admin selection from admin dashboard.
+
+
+[ASSISTANT — PREVIEW CONTROL RESULT]
+====================================
+
+Replaced the native Preview state select with a compact segmented Demo states switcher. It now uses responsive toggle buttons, active-state styling, keyboard focus states, and an accessible info tooltip explaining that it is assessment-only preview tooling and that real status values would normally come from admin-managed order data. The mobile layout was visually checked and adjusted to prevent header/control overflow.
