@@ -14,3 +14,32 @@
   .icon-button { @apply inline-flex h-9 w-9 items-center justify-center rounded-xl text-slate-500 transition hover:bg-white hover:text-brand focus:outline-none focus:ring-4 focus:ring-indigo-100; }
   .secondary { @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-indigo-400 hover:text-brand focus:outline-none focus:ring-4 focus:ring-indigo-100; }
 }
+
+.demo-state-panel {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.demo-state-heading { display: flex; align-items: center; gap: 9px; min-width: 0; }
+.demo-state-icon { display: grid; width: 30px; height: 30px; flex: 0 0 30px; place-items: center; border-radius: 9px; background: #f1f5f9; color: #64748b; }
+.demo-state-copy { min-width: 0; flex: 1; }
+.demo-state-title { color: #334155; font-size: 12px; font-weight: 700; line-height: 16px; }
+.demo-state-subtitle { overflow: hidden; color: #94a3b8; font-size: 11px; line-height: 15px; text-overflow: ellipsis; white-space: nowrap; }
+.demo-state-help-wrap { position: relative; flex: 0 0 auto; }
+.demo-state-help { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid #e2e8f0; border-radius: 9px; background: #fff; color: #64748b; cursor: pointer; }
+.demo-state-help:hover, .demo-state-help:focus-visible { border-color: #a5b4fc; color: #5146e5; outline: none; box-shadow: 0 0 0 3px #e0e7ff; }
+.demo-state-tooltip { position: absolute; top: calc(100% + 8px); right: 0; z-index: 20; width: min(260px, calc(100vw - 56px)); padding: 12px; border: 1px solid #334155; border-radius: 12px; background: #172033; color: #fff; box-shadow: 0 12px 24px rgba(15, 23, 42, 0.2); font-size: 11px; font-weight: 500; line-height: 16px; text-align: left; }
+.demo-state-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; width: 100%; min-width: 0; margin-top: 12px; }
+.demo-state-option { display: flex; min-width: 0; min-height: 36px; align-items: center; justify-content: center; padding: 7px 8px; overflow: hidden; border: 1px solid #e2e8f0; border-radius: 9px; background: #f8fafc; color: #64748b; cursor: pointer; font: inherit; font-size: 11px; font-weight: 700; line-height: 15px; text-align: center; text-overflow: ellipsis; white-space: nowrap; transition: background-color 150ms, border-color 150ms, color 150ms, box-shadow 150ms; }
+.demo-state-option:hover { border-color: #c7d2fe; background: #eef2ff; color: #5146e5; }
+.demo-state-option:focus-visible { outline: none; box-shadow: 0 0 0 3px #e0e7ff; }
+.demo-state-option.is-active { border-color: #5146e5; background: #5146e5; color: #fff; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12); }
+@media (min-width: 640px) {
+  .demo-state-options { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}

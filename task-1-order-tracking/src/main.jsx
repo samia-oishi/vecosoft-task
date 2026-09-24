@@ -25,7 +25,20 @@ const scenarios = {
 };
 
 function ScenarioSwitcher({ value, onChange }) {
-  return <section className="w-full min-w-0 max-w-full overflow-hidden rounded-2xl border border-dashed border-slate-300 bg-white/80 p-3 shadow-sm"><div className="flex items-center justify-between gap-3"><div className="flex min-w-0 items-center gap-2"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-500"><SlidersHorizontal size={14} /></span><div className="min-w-0"><p className="text-xs font-bold text-slate-700">Demo states</p><p className="truncate text-[11px] text-slate-400">Preview different order outcomes</p></div></div><div className="group relative shrink-0"><button className="icon-button h-7 w-7" aria-label="About demo states" aria-describedby="demo-state-tip"><Info size={15} /></button><span id="demo-state-tip" role="tooltip" className="pointer-events-none absolute right-0 top-9 z-30 hidden w-60 rounded-xl bg-slate-900 p-3 text-left text-[11px] font-medium leading-4 text-white shadow-xl group-hover:block group-focus-within:block">Demo-only control for this assessment. In a real product, these statuses would come from admin-managed order data.</span></div></div><div className="mt-3 grid w-full min-w-0 grid-cols-2 gap-1.5 sm:grid-cols-5" role="tablist" aria-label="Order state preview"><span className="sr-only">Choose an order state to preview</span>{scenarioOptions.map(option => <button key={option.value} type="button" role="tab" aria-selected={value === option.value} onClick={() => onChange(option.value)} className={`min-w-0 truncate rounded-lg px-2 py-2 text-[11px] font-bold transition focus:outline-none focus:ring-2 focus:ring-indigo-200 ${value === option.value ? 'bg-brand text-white shadow-sm' : 'bg-slate-100 text-slate-500 hover:bg-indigo-50 hover:text-brand'}`}>{option.label}</button>)}</div></section>;
+  const [showHelp, setShowHelp] = useState(false);
+  return <section className="demo-state-panel">
+    <div className="demo-state-heading">
+      <span className="demo-state-icon" aria-hidden="true"><SlidersHorizontal size={15} /></span>
+      <div className="demo-state-copy"><p className="demo-state-title">Demo states</p><p className="demo-state-subtitle">Preview different order outcomes</p></div>
+      <div className="demo-state-help-wrap">
+        <button className="demo-state-help" type="button" aria-label="Why is this control here?" aria-expanded={showHelp} aria-controls="demo-state-help" onClick={() => setShowHelp(open => !open)}><Info size={15} /></button>
+        {showHelp && <div className="demo-state-tooltip" id="demo-state-help" role="status">This switcher is included for assessment review. In a real product, order status is selected by an administrator and shown to the customer automatically.</div>}
+      </div>
+    </div>
+    <div className="demo-state-options" role="group" aria-label="Preview order status">
+      {scenarioOptions.map(option => <button key={option.value} type="button" aria-pressed={value === option.value} onClick={() => onChange(option.value)} className={`demo-state-option${value === option.value ? ' is-active' : ''}`}>{option.label}</button>)}
+    </div>
+  </section>;
 }
 
 function App() {

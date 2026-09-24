@@ -277,3 +277,17 @@ this part looks awkward the preview part. can we think of something better? like
 ====================================
 
 Replaced the native Preview state select with a compact segmented Demo states switcher. It now uses responsive toggle buttons, active-state styling, keyboard focus states, and an accessible info tooltip explaining that it is assessment-only preview tooling and that real status values would normally come from admin-managed order data. The mobile layout was visually checked and adjusted to prevent header/control overflow.
+
+
+[USER — 2026-09-24 — DESIGN QUALITY CORRECTION]
+================================================
+
+this is a frontend role task i am doing. please maintain design standard and consistency.
+
+The user attached a screenshot showing the demo-state controls collapsed together and the tooltip overflowing into the page.
+
+
+[ASSISTANT — DESIGN FIX]
+========================
+
+Rebuilt the Task 1 demo-state control with explicit component CSS for a consistent two-column mobile grid and five-column wider layout. The state choices are real buttons with pressed state and focus styling. The info control now opens a contained, high-contrast tooltip on click, so it does not appear merely because the pointer rests over it. Verified the updated layout visually at 565px wide and rebuilt Task 1.
