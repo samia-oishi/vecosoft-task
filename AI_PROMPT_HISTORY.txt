@@ -241,3 +241,27 @@ Implemented and locally committed the completed assessment deliverables.
 - Passed production builds for all three tasks.
 - Verified task pages and scenario URLs locally. The final version no longer includes illustration assets.
 - Created a local commit only; nothing was pushed or deployed.
+
+
+[USER — 2026-09-24 — REQUIREMENTS AUDIT REQUEST]
+================================================
+
+check task one against the company instruction again the check task 2 as well in the same way.
+
+
+[ASSISTANT — REQUIREMENTS AUDIT]
+===============================
+
+Task 1 was found to be missing the specific “Delivered but Not Received” state and its support button had no action. Its README also claimed a loading state that was not implemented. Task 2 was largely compliant, but its screenshot showed eviction only indirectly through a cache miss rather than explicitly naming the evicted key.
+
+
+[USER — FIX REQUEST]
+====================
+
+fix the issues.
+
+
+[ASSISTANT — FIX RESULT]
+========================
+
+Task 1 now includes in-transit, delayed, delivered, delivered-but-not-received, tracking-unavailable, and loading states. Support and report-issue actions now show accessible feedback. Task 2 now reports evicted keys from `put`, includes a regression test for eviction reporting, and its regenerated screenshot explicitly shows `evicted "B"` and `evicted "A"` for the company example.

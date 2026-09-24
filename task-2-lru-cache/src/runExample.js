@@ -3,7 +3,7 @@ import { LRUCache } from './lruCache.js';
 export function runCompanyExample() {
   const cache = new LRUCache(2);
   const output = [];
-  const put = (key, value) => { cache.put(key, value); output.push(`put("${key}", ${value})`); };
+  const put = (key, value) => { const evicted = cache.put(key, value); output.push(`put("${key}", ${value})${evicted ? ` → evicted "${evicted}"` : ''}`); };
   const get = key => { const value = cache.get(key); output.push(`get("${key}") → ${value}`); return value; };
   put('A', 10);
   put('B', 20);

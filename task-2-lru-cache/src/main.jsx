@@ -14,7 +14,7 @@ function makeExampleCache() {
 function App() {
   const [capacity, setCapacity] = useState(2); const [key, setKey] = useState(''); const [value, setValue] = useState(''); const [events, setEvents] = useState(() => runCompanyExample().map(message => ({ message, time: 'example' }))); const [cacheState, setCacheState] = useState(makeExampleCache);
   function refresh(next, message) { setCacheState(next); setEvents(previous => [{ message, time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) }, ...previous].slice(0, 10)); }
-  function put() { if (!key.trim() || !value.trim()) return; const next = new LRUCache(cacheState.capacity, cacheState.snapshot()); next.put(key.trim(), value.trim()); refresh(next, `put("${key.trim()}", ${value.trim()})`); setKey(''); setValue(''); }
+  function put() { if (!key.trim() || !value.trim()) return; const next = new LRUCache(cacheState.capacity, cacheState.snapshot()); const evicted = next.put(key.trim(), value.trim()); refresh(next, `put("${key.trim()}", ${value.trim()})${evicted ? ` → evicted "${evicted}"` : ''}`); setKey(''); setValue(''); }
   function get() { if (!key.trim()) return; const next = new LRUCache(cacheState.capacity, cacheState.snapshot()); const result = next.get(key.trim()); refresh(next, `get("${key.trim()}") → ${result}`); setKey(''); }
   function reset() { setCacheState(new LRUCache(capacity)); setEvents([]); }
   function loadExample() { setCapacity(2); setCacheState(makeExampleCache()); setEvents(runCompanyExample().map(message => ({ message, time: 'example' }))); }

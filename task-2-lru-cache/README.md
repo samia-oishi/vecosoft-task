@@ -2,7 +2,7 @@
 
 Standalone React + Vite + Tailwind implementation of an LRU cache. The implementation lives in `src/lruCache.js`; the UI loads the company example and demonstrates `get`, `put`, recency ordering, misses, eviction, and returned values.
 
-The cache uses an ordered JavaScript `Map`: the oldest entry is evicted and successful reads move entries to the most-recent end. Both operations are average O(1), with O(capacity) space.
+The cache uses an ordered JavaScript `Map`: the oldest entry is evicted and successful reads move entries to the most-recent end. Both operations are average O(1), with O(capacity) space. `put` returns the evicted key when an insertion exceeds capacity, which makes eviction visible in the demo output.
 
 ```bash
 npm install

@@ -41,6 +41,14 @@ test('capacity one always keeps the newest value', () => {
   assert.equal(cache.get('B'), 2);
 });
 
+test('put reports the key evicted by capacity overflow', () => {
+  const cache = new LRUCache(2);
+  cache.put('A', 1);
+  cache.put('B', 2);
+  assert.equal(cache.get('A'), 1);
+  assert.equal(cache.put('C', 3), 'B');
+});
+
 test('invalid capacities throw a useful error', () => {
   assert.throws(() => new LRUCache(0), /positive integer/);
   assert.throws(() => new LRUCache(1.5), /positive integer/);
