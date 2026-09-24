@@ -2,7 +2,7 @@
 
 Three independently deployable React + Vite + Tailwind applications built with JavaScript:
 
-- `task-1-order-tracking` — order tracking UI with phase illustrations
+- `task-1-order-tracking` — order tracking UI
 - `task-2-lru-cache` — tested LRU cache implementation and output demo
 - `task-3-algorithm-explanation` — copy-ready answer for the company text field
 

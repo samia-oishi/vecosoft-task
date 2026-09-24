@@ -200,8 +200,17 @@ The Task 2 output screenshot was captured from the running implementation using 
 The remaining work is documented in this file: Task 1 illustration integration and states, Task 2 implementation/tests/screenshot, Task 3 copy-ready answer, root documentation, full transcript maintenance, builds, localhost checks, and local commit verification.
 
 
-[END OF CURRENT TRANSCRIPT]
-===========================
+[USER — 2026-09-24 — ILLUSTRATIONS REMOVED]
+==============================================
+
+bad decision remove illustrations also review everything
+
+
+[ASSISTANT — REVIEW AND CORRECTION]
+===================================
+
+Removed the four generated Task 1 illustration assets and all application/documentation references to them. Task 1 retains the required order-tracking timeline, icon-based phases, scenario preview states, responsive layout, loading/error handling, and support action. The repository is being rebuilt and rechecked for stale references, tests, builds, localhost behavior, and documentation consistency.
+
 
 Future user and assistant messages for this assessment must be appended here in chronological order, preserving the original message text and keeping each speaker separate.
 
@@ -211,12 +220,12 @@ Future user and assistant messages for this assessment must be appended here in 
 
 Implemented and locally committed the completed assessment deliverables.
 
-- Added four transparent Task 1 order-tracking illustrations and integrated them into the timeline.
+- Added and later removed four generated Task 1 illustrations at the user’s request; the final Task 1 implementation uses the consistent icon-based timeline instead.
 - Added in-transit, delayed, delivered, and tracking-unavailable preview states.
 - Added the tested Task 2 LRU cache implementation, company example output, and output screenshot.
 - Added the copy-ready Task 3 answer in TASK_3_ANSWER.md.
 - Updated README files, style guides, skills files, and this complete conversation transcript.
 - Passed all five LRU tests.
 - Passed production builds for all three tasks.
-- Verified all task pages, scenario URLs, and illustration assets returned HTTP 200 locally.
+- Verified task pages and scenario URLs locally. The final version no longer includes illustration assets.
 - Created a local commit only; nothing was pushed or deployed.
