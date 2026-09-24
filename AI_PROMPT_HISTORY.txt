@@ -1,0 +1,14 @@
+AI PROMPT HISTORY
+==================
+
+2026-09-24 — User request 1
+---------------------------
+This is a task for a company and I am allowed to use Ai for it. Though the role is fopr frontend, I want you to think like a frontend focused software Engineer instead. The task instructions are given in the instruction images I have attached. I have created and published the repository - you can only commit but leave the pushing and deployment to me even though i may ask you to guide me through deployment later on. I want 3 individual folders for each of the three tasks. The Ai_Prompt_History.txt should be maintained including this first instruction and should be stored as a seperate file on the root. I need you to focus on good design and follow on the requirements but also think of edge cases and security issues or anything else that might cause an issue later on. Take heed of my time constraint. I currently have about 3 hours left on the timer. you need to run each of the tasks seperately on localhost for me to check them and manually update them. you can maintain a styleguide.md and a skills.md file in general for each task.
+
+2026-09-24 — User request 2
+---------------------------
+not typescript use javascript react+vite and tailwind. you can also use design libraries and libraries or cdn for icons . also keep design consistency throughout each task.
+
+2026-09-24 — User request 3
+---------------------------
+PLEASE IMPLEMENT THIS PLAN: Build three independently deployable React + Vite applications using JavaScript and Tailwind CSS in task-1-order-tracking, task-2-lru-cache, and task-3-algorithm-explanation, with consistent design, validation, accessibility, documentation, local-only commits, and no pushing or deployment.
