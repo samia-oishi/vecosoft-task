@@ -1,6 +1,6 @@
 # Implementation skills
 
-- React controlled textarea and submission state
-- Accessible prompt structure and semantic form labeling
+- Clear technical writing connected to the implementation
+- React presentation of structured algorithm analysis
 - Tailwind responsive layout and consistent design tokens
 - Character limits, minimum-detail validation, and success feedback

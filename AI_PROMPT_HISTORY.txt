@@ -12,3 +12,7 @@ not typescript use javascript react+vite and tailwind. you can also use design l
 2026-09-24 — User request 3
 ---------------------------
 PLEASE IMPLEMENT THIS PLAN: Build three independently deployable React + Vite applications using JavaScript and Tailwind CSS in task-1-order-tracking, task-2-lru-cache, and task-3-algorithm-explanation, with consistent design, validation, accessibility, documentation, local-only commits, and no pushing or deployment.
+
+2026-09-24 — User correction
+----------------------------
+The screenshots are the company’s task instructions, not the product UI to recreate. Remove the repeated submission forms. Implement the actual Task 1 order-tracking screen, Task 2 LRU Cache implementation/demo, and Task 3 algorithm explanation.

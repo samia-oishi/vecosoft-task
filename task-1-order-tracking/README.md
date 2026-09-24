@@ -1,6 +1,6 @@
 # Task 1 — Order Tracking
 
-Standalone React + Vite + Tailwind implementation of the order tracking experience.
+Standalone React + Vite + Tailwind implementation of a responsive mobile-first e-commerce order tracking screen. It includes normal, loading, and error states.
 
 ```bash
 npm install
