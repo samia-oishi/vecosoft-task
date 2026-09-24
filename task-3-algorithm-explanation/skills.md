@@ -1,6 +1,6 @@
 # Implementation skills
 
-- Clear technical writing connected to the implementation
-- React presentation of structured algorithm analysis
-- Tailwind responsive layout and consistent design tokens
-- Mapping implementation decisions to complexity and trade-off explanations
+- Concise technical writing for a constrained text field
+- Explaining data structures and complexity accurately
+- Connecting cache behavior to realistic access patterns
+- Documenting AI-assisted decisions transparently

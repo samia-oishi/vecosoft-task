@@ -1,3 +1,5 @@
-# Style guide
+# Writing guide
 
-Uses the shared assessment language: soft neutral background, white bordered cards, indigo primary actions, slate text, emerald success, rose validation, consistent 8px rounding, and visible focus rings.
+- Keep the answer concise enough for the company textarea’s recommended 100–200 words.
+- Use plain technical language and name the operations directly: `get`, `put`, eviction, hit, and miss.
+- Cover all four numbered requirements without adding unrelated implementation details.

@@ -1,12 +1,10 @@
 # Task 3 — Algorithm Explanation
 
-This task contains the written explanation required for the LRU Cache implementation. The explanation is also presented as a polished reference page in the React app.
+Task 3 is a written response for the company portal, not a separate frontend application.
 
-The copy-ready answer is in [`TASK_3_ANSWER.md`](./TASK_3_ANSWER.md). Paste that content into the company portal’s Task 3 answer field.
+Copy the contents of [`TASK_3_ANSWER.md`](./TASK_3_ANSWER.md) into the portal’s “Your answer” field. It is intentionally concise and covers the four requested points:
 
-It covers the chosen data structures, complexity, a poor access pattern, and the AI-assisted design decision.
-
-```bash
-npm install
-npm run dev
-```
+1. Data structures and why they were selected.
+2. Time and space complexity.
+3. A realistic poor access pattern.
+4. An AI suggestion that was kept or rejected, with reasoning.
